@@ -43,8 +43,8 @@ public class AccountsServiceImpl implements IAccountsService {
         //     throw new WrongNameException("Wrong Name. Hahaha!");
         // }
 
-        customer.setCreatedAt(LocalDateTime.now());
-        customer.setCreatedBy("Pragash");
+        // customer.setCreatedAt(LocalDateTime.now());
+        // customer.setCreatedBy("Pragash");
         Customer savedCustomer = customerRepository.save(customer);
 
         accountRepository.save(createNewAccount(savedCustomer));
@@ -57,8 +57,8 @@ public class AccountsServiceImpl implements IAccountsService {
         newAccount.setAccountNumber(randomAccNumber);
         newAccount.setAccountType(AccountsConstants.SAVINGS);
         newAccount.setBranchAddress(AccountsConstants.ADDRESS);
-        newAccount.setCreatedAt(LocalDateTime.now());
-        newAccount.setCreatedBy("Pragash");
+        // newAccount.setCreatedAt(LocalDateTime.now());
+        // newAccount.setCreatedBy("Pragash");
 
         return newAccount;
     }
